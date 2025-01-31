@@ -183,7 +183,7 @@ document.addEventListener('pjax:complete', () => {
 setTimeout(() => {
     preloader.endLoading();
 }, 5000);</script><!-- console--><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">1</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="waline_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
-  await fetch('https://ped-waline-5k8o63xbd-ancomismers-projects.vercel.app//api/comment?type=recent&count=-1', {method: 'GET'}).then(async res => res.json())
+  await fetch('https://ped-waline.vercel.app//api/comment?type=recent&count=-1', {method: 'GET'}).then(async res => res.json())
     .then(async data => {
       document.querySelector('#waline_allcount').innerHTML = data.length
     })
